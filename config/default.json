@@ -1,0 +1,189 @@
+{
+  "language": "en"
+, "environment": "local"
+, "timezone": "America/New_York"
+, "authentication": false
+, "session": {
+    "secret": "roflcopter"
+  }
+, "chartbeat": {
+    "uid": 6137
+  , "domain": "golazo.localhost"
+  , "enabled": false
+  }
+, "google_analytics": {
+    "enabled": false
+  , "code": "UA-XXXXXXXX-XX"
+  }
+, "use_minify_js": false
+, "eos": {
+    "url": "https://eosapiqa.mlsdev.net"
+  , "token": "Z29sYXpvOlVZcnJYYkI1TWQwSnJ0ZlZaS05zaTJjdkc5ZjdlMA=="
+  , "version": "1.0.1"
+  , "defaultSite": "www.mlssoccer.com"
+  }
+, "matchlist_update_interval": 600000
+, "email": {
+    "enabled": false
+  , "to": [
+      "developers@mlssoccer.com"
+    ]
+  , "from": "developers@mlssoccer.com"
+  }
+, "dfp": {
+    "site": "/8375/golazo.mlsdigital.net/matchcenter"
+  }
+, "couchbase": {
+    "host": "localhost"
+  , "port": 8092
+  , "admin_port": 8091
+  , "username": "Administrator"
+  , "password": "Administrator"
+  , "bucket": "golazo"
+  , "viewpath" : "./couchbase/views"
+  }
+, "memcache": {
+    "enabled": true
+  , "port": 11212
+  , "ttl": 300
+  , "options": {
+      "timeout": 200
+    , "retry": 100
+    }
+  }
+, "sequence": {
+    "ttl": 172800
+  , "events": [
+      "comment", "commentDelete", "goal", "goalDelete", "booking", "bookingDelete"
+    , "substitution", "substitutionDelete", "formation", "matchState", "matchPossession"
+    , "lineup", "matchClubStatistics", "matchClubPlayerStatistics", "matchClubPassMatrix"
+    , "matchClubShots", "matchClockTick", "article", "video", "tweet", "instagram"
+    , "notification", "deleteTweet", "deleteInstagram", "shootout"
+    ]
+  }
+, "stats": {
+    "path": null
+  }
+, "gigya": {
+    "key": "3_qXcJkloa6NFF9zexvt85l9soAHM8lMBWhxcXyhpo3eqanqPp8bQONNH8vunw-rTE"
+  , "categories": {
+      "articles": "test_article"
+    , "general": "golazo_general"
+    }
+  }
+, "redis": {
+    "host": "localhost"
+  , "port": 6379
+  , "password": null
+  , "listen": false
+  }
+, "log": {
+    "console": "debug"
+  , "file": "info"
+  , "path": null
+  }
+, "twitter": {
+    "consumerKey": "IBe4PwRFis3RdNfPoP3S9A"
+  , "consumerSecret": "axUWyjvpLEGytUYLVinU1BkHlSPfQoCszONqs9tQc"
+  , "accessToken": "904410482-8MFBOEcW34hep7F1WhfrCJWPGpIc7QirUX2zU601"
+  , "accessTokenSecret": "vwWrE8RPpwayr5cachzjs4XFrEhqPdcSxvHjLdR4U6U"
+  }
+, "twitterCard": {
+    "twitter:site": "@MLS"
+  , "twitter:site:id": "107146095"
+  }
+, "moderation": {
+    "max": 10
+  , "threshold": 1000
+  }
+, "keyEvents": [
+    "goal"
+  , "own goal"
+  , "corner"
+  , "yellow card"
+  , "secondyellow card"
+  , "red card"
+  , "start"
+  , "end"
+  , "end 1"
+  , "end 2"
+  , "end 3"
+  , "end 4"
+  , "end 5"
+  , "end 6"
+  , "end 7"
+  , "end 8"
+  , "end 9"
+  , "end 10"
+  , "end 11"
+  , "end 12"
+  , "end 13"
+  , "end 14"
+  , "penalty saved"
+  , "penalty miss"
+  ]
+, "testGames": {
+    "MLS:MATCH:436018": true
+  , "MLS:MATCH:481086": true
+  , "MLS:MATCH:481009": true
+  , "MLS:MATCH:481261": true
+  , "MLS:MATCH:481262": true
+  , "MLS:MATCH:481087": true
+  , "MLS:MATCH:480954": true
+  , "MLS:MATCH:": true
+  }
+, "manager_consumer": {
+    "name": "manager_consumer"
+  , "port": 8001
+  , "redis": {
+      "listen": true
+    }
+  , "session": {
+      "secret": "soccerbreakshamstrings"
+    }
+  }
+, "manager_opta": {
+    "name": "manager_opta"
+  , "port": 8002
+  }
+, "manager_instagram": {
+    "name": "manager_instagram"
+  , "port": 8003
+  , "redis": {
+      "listen": true
+    }
+  }
+, "manager_api": {
+    "name": "manager_api"
+  , "port": 8004
+  }
+, "manager_clock": {
+    "name": "manager_clock"
+  , "redis": {
+      "listen": true
+    }
+  }
+, "manager_twitter": {
+    "name": "manager_twitter"
+  , "port": 8001
+  , "redis": {
+      "listen": true
+    }
+  }
+, "manager_admin": {
+    "name": "manager_admin"
+  , "host": "localhost"
+  , "port": 8005
+  , "redis": {
+      "listen": true
+    }
+  , "session": {
+      "secret": "headpassescauseconcussions"
+    }
+  }
+, "manager_video": {
+    "name": "manager_video"
+  , "port": 8006
+  }
+, "match_completion_interval": 21600000
+}

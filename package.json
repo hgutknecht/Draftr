@@ -1,22 +1,11 @@
 {
-  "name": "draftr"
-, "version": "0.0.1"
-, "private": true
-, "dependencies": {
-    "winston": "0.6.2"
-  , "jade": "0.28.2"
-  , "express": "3.0.0rc4"
-  , "supertest" : "0.5.1"
-  , "underscore": "1.4.4"
-  , "socket.io": "0.9.14"
-  , "redis": "0.8.3"
-  , "twit" : "1.1.6"
-  , "jade-browser" : "0.0.9"
-  , "restify" : "2.4.0"
-  , "bunyan" : "0.21.1"
-  , "passport" : "0.1.16"
-  , "passport-local" : "0.1.6"
-  , "passport.socketio" : "1.0.1"
-  , "everyauth" : "git://github.com/bnoguchi/everyauth.git#express3"
+  "name": "Draftr",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.1.0"
+    , "jade": "*"
+    , "underscore": "*"
+    , "redis": "*"
   }
 }
