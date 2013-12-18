@@ -9,13 +9,7 @@ $(function() {
       ui.placeholder.height(ui.item.height());
     }
   , update: function (event, ui) {
-      var msg = {
-        type: 'sort'
-      , sortable1: $('#sortable1').html()
-      , sortable2: $('#sortable2').html()
-      , sortable3: $('#sortable3').html()
-      };
-      send(msg);
+      sendHTML();
     }
   }).disableSelection();
 
@@ -87,19 +81,33 @@ $(function() {
       , $el = $($sort1.children()[0]);
     $el.append('<div class="pick-text">' + txt + '</div>');
     $picks.append($el);
+    
     send({
       type: 'picks'
-    , html: $picks.html()
     });
+    sendHTML();
+    
     $modalText.val('');
     $modal.modal('hide');
   });
 
+  function sendHTML() {
+    var msg = {
+      type: 'html'
+    , sortable1: $('#sortable1').html()
+    , sortable2: $('#sortable2').html()
+    , sortable3: $('#sortable3').html()
+    , picks: $picks.html()
+    };
+    send(msg);
+  }
+
   // Get html data from pre-sort list.
-  function getSorted(data) {
+  function getHTML(data) {
     $('#sortable1').html(data.sortable1);
     $('#sortable2').html(data.sortable2);
     $('#sortable3').html(data.sortable3);
+    $picks.html(data.picks);
   }
 
   // Get pick data from input.
@@ -134,7 +142,7 @@ $(function() {
   sock.onmessage = function(e) {
     console.log('message', e);
     var msg = JSON.parse(e.data);
-    if (msg.type === 'sort') return getSorted(msg);
+    if (msg.type === 'html') return getHTML(msg);
     if (msg.type === 'picks') return getPicks(msg);
     if (msg.type === 'clock') return getClock(msg);
     if (msg.type === 'commentary') return writeCommentary(msg);
