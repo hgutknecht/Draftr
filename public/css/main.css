@@ -5,7 +5,12 @@ li, ul {
 }
 .stage-container {
   display: inline-block;
+  margin: .8em 0;
   width: 60%;
+}
+#sortable1 {
+  background: #FCDADA;
+  height: 80px;
 }
 .clock {
   display: inline-block;
@@ -19,6 +24,7 @@ li, ul {
 }
 .team {
 	background: #D4E7F7;
+  border: 1px solid #D6C6C6;
   margin: .8em 0;
   padding: 0.3em;
 }
@@ -27,6 +33,9 @@ li, ul {
   display: inline-block;
   margin: 0 1em;
   vertical-align: middle;
+}
+.stage-container .team {
+  margin: 0;
 }
 span.pickNumber {
   background: #e7e7e7;
