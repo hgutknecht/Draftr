@@ -20,11 +20,6 @@ $(function() {
     clockFace: 'MinuteCounter',
     countdown: true,
     autoStart: false,
-    callbacks: {
-      start: function() {
-        $('.message').html('The clock has started!');
-      }
-    }
   });
 
 });
