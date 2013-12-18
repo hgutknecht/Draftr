@@ -13,6 +13,20 @@ $(function() {
     }
   });
 
+  var clock;
+
+  var clock;
+  clock = $('.clock').FlipClock(180, {
+    clockFace: 'MinuteCounter',
+    countdown: true,
+    autoStart: false,
+    callbacks: {
+      start: function() {
+        $('.message').html('The clock has started!');
+      }
+    }
+  });
+
 });
 
 

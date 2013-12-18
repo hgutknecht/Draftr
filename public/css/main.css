@@ -14,10 +14,9 @@ li, ul {
 }
 .clock {
   display: inline-block;
-    width: 40%;
   text-align: center;
-  font-size: 3em;
   vertical-align: top;
+  width: 32%;
 }
 .btn.btn-info {
   margin: 0 1em 0 0;
@@ -80,4 +79,7 @@ span.pickNumber {
   height: 310px;
   overflow: scroll;
   padding: 1em;
+}
+.flip-clock-wrapper {
+  margin: 3em 0 0 4em;
 }
