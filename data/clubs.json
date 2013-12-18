@@ -1,0 +1,259 @@
+[
+  {
+    "id": 1207,
+    "logo": "http://www.mlssoccer.com/sites/default/files/chicago_150.png",
+    "colors": [
+      "#D9174B",
+      "#002B69",
+      "#002B69",
+      "#982019"
+    ],
+    "shortName": "Chicago",
+    "name": "Chicago Fire",
+    "abbr": "CHI"
+  },
+  {
+    "id": 2079,
+    "logo": "http://www.mlssoccer.com/sites/default/files/chivas_150.png",
+    "colors": [
+      "#A10823",
+      "#FFFFFF",
+      "#002B60",
+      "#FFD52D"
+    ],
+    "shortName": "Chivas USA",
+    "name": "Chivas USA",
+    "abbr": "CHV"
+  },
+  {
+    "id": 436,
+    "logo": "http://www.mlssoccer.com/sites/default/files/colorado_150.png",
+    "colors": [
+      "#98012E",
+      "#8FB8DE",
+      "#C7CBCE",
+      "#FFFFFF"
+    ],
+    "shortName": "Colorado",
+    "name": "Colorado Rapids",
+    "abbr": "COL"
+  },
+  {
+    "id": 454,
+    "logo": "http://www.mlssoccer.com/sites/default/files/columbus_150.png",
+    "colors": [
+      "#FFE014",
+      "#B9BEC2",
+      "#130F10",
+      "#FFFFFF"
+    ],
+    "shortName": "Columbus",
+    "name": "Columbus Crew",
+    "abbr": "CLB"
+  },
+  {
+    "id": 1326,
+    "logo": "http://www.mlssoccer.com/sites/default/files/dc_150.png",
+    "colors": [
+      "#EC171E",
+      "#000000",
+      "#242424",
+      "#FFFFFF"
+    ],
+    "shortName": "D.C. United",
+    "name": "D.C. United",
+    "abbr": "DC"
+  },
+  {
+    "id": 1903,
+    "logo": "http://www.mlssoccer.com/sites/default/files/dallas_150.png",
+    "colors": [
+      ""
+    ],
+    "shortName": "FC Dallas",
+    "name": "FC Dallas",
+    "abbr": "DAL"
+  },
+  {
+    "id": 1897,
+    "logo": "http://www.mlssoccer.com/sites/default/files/houston_150.png",
+    "colors": [
+      "#FF6F00",
+      "#000000",
+      "#ffffff",
+      "#E01400"
+    ],
+    "shortName": "Houston",
+    "name": "Houston Dynamo",
+    "abbr": "HOU"
+  },
+  {
+    "id": 1230,
+    "logo": "http://www.mlssoccer.com/sites/default/files/losangeles_150.png",
+    "colors": [
+      "#002F4D",
+      "#ffd900",
+      "#3365b1",
+      "#000000"
+    ],
+    "shortName": "LA Galaxy",
+    "name": "LA Galaxy",
+    "abbr": "LA"
+  },
+  {
+    "id": 1616,
+    "logo": "http://www.mlssoccer.com/sites/league/files/montrealimapact_logo.png",
+    "colors": [
+      "#105BAA",
+      "#000000",
+      "#BCBDC0",
+      "#0067B1"
+    ],
+    "shortName": "Montreal",
+    "name": "Montreal Impact",
+    "abbr": "MTL"
+  },
+  {
+    "id": 928,
+    "logo": "http://www.mlssoccer.com/sites/default/files/newengland_150.png",
+    "colors": [
+      "#E51937",
+      "#002A5C",
+      "#1A283D",
+      "#FFFFFF"
+    ],
+    "shortName": "New England",
+    "name": "New England Revolution",
+    "abbr": "NE"
+  },
+  {
+    "id": 399,
+    "logo": "http://www.mlssoccer.com/sites/default/files/newyork_150.png",
+    "colors": [
+      "#CC0033",
+      "#06204A",
+      "#E2C500",
+      "#E41B4F"
+    ],
+    "shortName": "New York",
+    "name": "New York Red Bulls",
+    "abbr": "NY"
+  },
+  {
+    "id": 6900,
+    "logo": "http://www.mlssoccer.com/sites/league/files/200px-OrlandoCity2012.png",
+    "colors": [
+      "#6B2669",
+      "#B30737",
+      "#C8B58A",
+      "#FFFFFF"
+    ],
+    "shortName": "Orlando City",
+    "name": "Orlando City",
+    "abbr": "ORL"
+  },
+  {
+    "id": 5513,
+    "logo": "http://www.mlssoccer.com/sites/default/files/philadelphia_150.png",
+    "colors": [
+      "#00285A",
+      "#AD9052",
+      "#3688DA",
+      "#FFFFFF"
+    ],
+    "shortName": "Philadelphia",
+    "name": "Philadelphia Union",
+    "abbr": "PHI"
+  },
+  {
+    "id": 1581,
+    "logo": "http://www.mlssoccer.com/sites/default/files/portlandtimberslogo.png",
+    "colors": [
+      "#004812",
+      "#EA2539",
+      "#EAE827",
+      "#17A161"
+    ],
+    "shortName": "Portland",
+    "name": "Portland Timbers",
+    "abbr": "POR"
+  },
+  {
+    "id": 1899,
+    "logo": "http://www.mlssoccer.com/sites/league/files/1899_200x200.png",
+    "colors": [
+      "#083A81",
+      "#B20838",
+      "#FBD600",
+      "#FFFFFF"
+    ],
+    "shortName": "Real Salt Lake",
+    "name": "Real Salt Lake",
+    "abbr": "RSL"
+  },
+  {
+    "id": 1131,
+    "logo": "http://www.mlssoccer.com/sites/default/files/sanjose_150.png",
+    "colors": [
+      "#108DD3",
+      "#000000",
+      "#C2C3C6",
+      "#006AB2"
+    ],
+    "shortName": "San Jose",
+    "name": "San Jose Earthquakes",
+    "abbr": "SJ"
+  },
+  {
+    "id": 3500,
+    "logo": "http://www.mlssoccer.com/sites/default/files/seattle_150.png",
+    "colors": [
+      "#6BA540",
+      "#155291",
+      "#434343",
+      "#1794CE"
+    ],
+    "shortName": "Seattle",
+    "name": "Seattle Sounders FC",
+    "abbr": "SEA"
+  },
+  {
+    "id": 421,
+    "logo": "http://www.mlssoccer.com/sites/default/files/sportingkc_logo.png",
+    "colors": [
+      "#A0B6D2",
+      "#0E486F",
+      "#162235",
+      "#8E9087"
+    ],
+    "shortName": "Sporting KC",
+    "name": "Sporting Kansas City",
+    "abbr": "SKC"
+  },
+  {
+    "id": 2077,
+    "logo": "http://www.mlssoccer.com/sites/default/files/toronto_150.png",
+    "colors": [
+      "#DD102F",
+      "#33434E",
+      "#A5AAAE",
+      "#FFFFFF"
+    ],
+    "shortName": "Toronto FC",
+    "name": "Toronto FC",
+    "abbr": "TOR"
+  },
+  {
+    "id": 1708,
+    "logo": "http://www.mlssoccer.com/sites/league/files/1708.png",
+    "colors": [
+      "#97C0E6",
+      "#001943",
+      "#FFFFFF",
+      "#01183F"
+    ],
+    "shortName": "Vancouver",
+    "name": "Vancouver Whitecaps FC",
+    "abbr": "VAN"
+  }
+]
