@@ -38,6 +38,11 @@ $(function() {
       clock.start();
       clockRunning = true;
     }
+    send({
+      type: 'clock'
+    , running: clockRunning
+    , time: clock.getTime().time
+    })
   });
 
   clock = $('.clock').FlipClock(180, {
@@ -47,39 +52,75 @@ $(function() {
   });
 
 
-  // var $modal = $('#pickModal')
-  // $modal.modal({
-    
-  // })
+  var $modal = $('#pickModal')
+    , $modalSave = $('#pickSave')
+    , $modalText = $('#pickInput')
+    , $picks = $('.picks')
+    , $commentary = $('.commentary')
+    , $sort1 = $('#sortable1')
+
+  $modalSave.on('click', function() {
+    var txt = $modalText.val()
+      , $el = $($sort1.children()[0])
+
+    $el.append('<div class="pick-text">' + txt + '</div>')
+    $picks.append($el)
+
+    send({
+      type: 'picks'
+    , html: $picks.html()
+    })
+
+    $modalText.val('')
+    $modal.modal('hide')
+  })
+
+
+  function getSorted(data) {
+    $('#sortable1').html(data.sortable1)
+    $('#sortable2').html(data.sortable2)
+    $('#sortable3').html(data.sortable3)
+  }
+
+  function getPicks(data) {
+    $picks.html(data.html);
+  }
+
+  function getClock(data) {
+    clock.setTime(data.time)
+
+    if (data.running) {
+      clock.start();
+    } else {
+      clock.stop();
+    }
+  }
+
+
+
+  var sock = new SockJS('/echo')
+
+  sock.onopen = function() {
+    console.log('open');
+  };
+
+  sock.onmessage = function(e) {
+    console.log('message', e);
+    var msg = JSON.parse(e.data)
+
+    if (msg.type === 'sort') return getSorted(msg)
+    if (msg.type === 'picks') return getPicks(msg)
+    if (msg.type === 'clock') return getClock(msg)
+  };
+
+  sock.onclose = function() {
+    console.log('close');
+  };
+
+  function send(msg) {
+    console.log('send: ', msg)
+    sock.send(JSON.stringify(msg))
+  }
+
 
 });
-
-
-function getSorted(data) {
-  $('#sortable1').html(data.sortable1)
-  $('#sortable2').html(data.sortable2)
-  $('#sortable3').html(data.sortable3)
-}
-
-
-
-var sock = new SockJS('/echo')
-
-sock.onopen = function() {
-  console.log('open');
-};
-
-sock.onmessage = function(e) {
-  console.log('message', e);
-  var msg = JSON.parse(e.data)
-
-  if (msg.type === 'sort') return getSorted(msg)
-};
-
-sock.onclose = function() {
-  console.log('close');
-};
-
-function send(msg) {
-  sock.send(JSON.stringify(msg))
-}
