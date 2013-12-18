@@ -1,6 +1,12 @@
+li, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .team {
 	background: #D4E7F7;
   margin: .8em 0;
+  padding: 0.3em;
 }
 .team div,
 .team span {
@@ -8,20 +14,17 @@
   margin: 0 1em;
   vertical-align: middle;
 }
-
 span.pickNumber {
   background: #e7e7e7;
   border-radius: 5px;
   padding: .5em;
 }
-
 .club-logo {
   background: url(../img/mls_network.png);
   height: 30px;
   margin: .5em;
   width: 30px;
 }
-
 .dcu .club-logo { background-position: 0 500px; }
 .chv .club-logo { background-position: 0 593px; }
 .tor .club-logo { background-position: 0 0; }
@@ -41,3 +44,9 @@ span.pickNumber {
 .por .club-logo { background-position: 0 254px; }
 .spo .club-logo { background-position: 0 131px; }
 .new .club-logo { background-position: 0 317px; }
+.connectedSortable li:hover {
+  cursor: pointer;
+}
+.connectedSortable   li.ui-sortable-helper {
+  cursor: move;
+}
