@@ -8,6 +8,17 @@ html
     meta(name='apple-mobile-web-app-capable', content="yes")
 
   body
+    div.modal.fade#pickModal(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      div.modal-dialog
+        div.modal-content
+          div.modal-header
+            button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+            h4.modal-title Enter pick or defer information.
+          div.modal-body
+            textarea#pickInput(cols="75", rows="4")
+          div.modal-footer
+            button.btn.btn-default(type="button", data-dismiss="modal") Close
+            button.btn.btn-default(type="button") Save changes
     div.navbar.navbar-inverse.navbar-fixed-top
       div.container
           div.navbar-header

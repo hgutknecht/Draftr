@@ -19,6 +19,7 @@ li, ul {
 }
 .team {
 	background: #D4E7F7;
+  border: 1px solid #D6C6C6;
   margin: .8em 0;
   padding: 0.3em;
 }

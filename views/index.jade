@@ -6,8 +6,8 @@ block content
         ul#sortable1.connectedSortable
           li This is the stage.
         a.btn.btn-info.clock-controller(href="#") Stop or Start Clock
-        a.btn.btn-info.defer(href="#") Defer
-        a.btn.btn-info.pick(href="#") Pick
+        a.btn.btn-info.defer(href="#", data-toggle="modal", data-target="#pickModal") Defer
+        a.btn.btn-info.pick(href="#", data-toggle="modal", data-target="#pickModal") Pick
       div.clock 3:00
   div.container
     div.row
