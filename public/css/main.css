@@ -1,7 +1,7 @@
 li, ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 .stage-container {
   display: inline-block;
@@ -103,9 +103,15 @@ span.pickNumber {
   margin-top: .5em;
 }
 .flip-clock-wrapper {
-  margin: 3em 0 0 4em;
   margin: 40px 0 0 116px;
 }
 .commmentary-input {
   width: 100%;
+}
+.clock-status {
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  right: 214px;
+  top: 183px;
 }

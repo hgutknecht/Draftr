@@ -31,7 +31,9 @@ $(function() {
     });
     var $list = $(this);
     if ($list.children().length > 1) {
+      console.log('this happened');
       $(ui.sender).sortable('cancel');
+      $('.clock-status').html('');
     }
   });
 
@@ -46,20 +48,22 @@ $(function() {
     $(this).val('');
   });
   $('.commmentary-input').keyup(function(e){
-    if(e.keyCode == 13) {
+    if (e.keyCode == 13) {
       $(this).trigger('enterKey');
     }
   });
 
-  // Sync clock start/pause to clients.
+  // Sync clock button start/pause to clients.
   $('.clock-controller').click(function(){
     if (clockRunning) {
       clock.stop();
       clockRunning = false;
+      $('.clock-status').html('TIMEOUT');
     }
     else {
       clock.start();
       clockRunning = true;
+      $('.clock-status').html('');
     }
     send({
       type: 'clock'
@@ -81,12 +85,12 @@ $(function() {
       , $el = $($sort1.children()[0]);
     $el.append('<div class="pick-text">' + txt + '</div>');
     $picks.append($el);
-    
+
     send({
       type: 'picks'
     });
     sendHTML();
-    
+
     $modalText.val('');
     $modal.modal('hide');
   });
@@ -94,10 +98,10 @@ $(function() {
   function sendHTML() {
     var msg = {
       type: 'html'
-    , sortable1: $('#sortable1').html()
-    , sortable2: $('#sortable2').html()
-    , sortable3: $('#sortable3').html()
-    , picks: $picks.html()
+      , sortable1: $('#sortable1').html()
+      , sortable2: $('#sortable2').html()
+      , sortable3: $('#sortable3').html()
+      , picks: $picks.html()
     };
     send(msg);
   }
@@ -140,7 +144,7 @@ $(function() {
     console.log('open');
   };
   sock.onmessage = function(e) {
-    console.log('message', e);
+    // console.log('message', e);
     var msg = JSON.parse(e.data);
     if (msg.type === 'html') return getHTML(msg);
     if (msg.type === 'picks') return getPicks(msg);
@@ -151,7 +155,7 @@ $(function() {
     console.log('close');
   };
   function send(msg) {
-    console.log('send: ', msg);
+    // console.log('send: ', msg);
     sock.send(JSON.stringify(msg));
   }
 
