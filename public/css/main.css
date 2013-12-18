@@ -16,7 +16,7 @@ li, ul {
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  width: 32%;
+  width: 27%;
 }
 .btn.btn-info {
   margin: 0 1em 0 0;
@@ -82,4 +82,8 @@ span.pickNumber {
 }
 .flip-clock-wrapper {
   margin: 3em 0 0 4em;
+  margin: 40px 0 0 116px;
+}
+.commmentary-input {
+  width: 100%;
 }

@@ -1,6 +1,9 @@
 $(function() {
-  $( "#sortable1, #sortable2, #sortable3" ).sortable({
-    connectWith: ".connectedSortable",
+
+  var clockRunning = false;
+
+  $('#sortable1, #sortable2, #sortable3').sortable({
+    connectWith: '.connectedSortable',
     start: function(e,ui){
       ui.placeholder.height(ui.item.height());
     }
@@ -16,14 +19,26 @@ $(function() {
     }
   }).disableSelection();
 
-  $("#sortable1").on("sortreceive", function(event, ui) {
+  $('#sortable1').on('sortreceive', function(event, ui) {
+    // Start the on the clock timer.
+    clock.start();
+    clockRunning = true;
     var $list = $(this);
     if ($list.children().length > 1) {
       $(ui.sender).sortable('cancel');
     }
   });
 
-  var clock;
+  $('.clock-controller').click(function(){
+    if (clockRunning) {
+      clock.stop();
+      clockRunning = false;
+    }
+    else {
+      clock.start();
+      clockRunning = true;
+    }
+  });
 
   clock = $('.clock').FlipClock(180, {
     clockFace: 'MinuteCounter',
