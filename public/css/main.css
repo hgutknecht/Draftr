@@ -78,11 +78,29 @@ span.pickNumber {
   border: 1px solid #e9e9e9;
   height: 310px;
   overflow: scroll;
-  padding: 1em;
+  padding: .5em;
 }
 .commentary .item {
   border-bottom: 1px solid #e9e9e9;
   margin: .2em;
+}
+.picks .team {
+  background: #FFEAEA;
+  margin: 0 0 .5em 0;
+}
+.picks .team .club {
+  font-weight: bold;
+  margin: 0 0 0 .7em;
+}
+.picks .team .club-logo {
+  margin: 0;
+}
+.picks .team .pickNumber {
+  display: none;
+}
+.picks .team .pick-text {
+  display: block;
+  margin-top: .5em;
 }
 .flip-clock-wrapper {
   margin: 3em 0 0 4em;
