@@ -1,0 +1,43 @@
+.team {
+	background: #D4E7F7;
+  margin: .8em 0;
+}
+.team div,
+.team span {
+  display: inline-block;
+  margin: 0 1em;
+  vertical-align: middle;
+}
+
+span.pickNumber {
+  background: #e7e7e7;
+  border-radius: 5px;
+  padding: .5em;
+}
+
+.club-logo {
+  background: url(../img/mls_network.png);
+  height: 30px;
+  margin: .5em;
+  width: 30px;
+}
+
+.dcu .club-logo { background-position: 0 500px; }
+.chv .club-logo { background-position: 0 593px; }
+.tor .club-logo { background-position: 0 0; }
+.col .club-logo { background-position: 0 562px; }
+.dal .club-logo { background-position: 0 469px; }
+.phi .club-logo { background-position: 0 285px; }
+.van .club-logo { background-position: 0 70px; }
+.chi .club-logo { background-position: 0 624px; }
+.mon .club-logo { background-position: 0 379px; }
+.san .club-logo { background-position: 0 193px; }
+.hou .club-logo { background-position: 0 439px; }
+.col .club-logo { background-position: 0 562px; }
+.ner .club-logo { background-position: 0 346px; }
+.sea .club-logo { background-position: 0 162px; }
+.lag .club-logo { background-position: 0 410px; }
+.rea .club-logo { background-position: 0 223px; }
+.por .club-logo { background-position: 0 254px; }
+.spo .club-logo { background-position: 0 131px; }
+.new .club-logo { background-position: 0 317px; }

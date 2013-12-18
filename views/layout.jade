@@ -8,8 +8,11 @@ html
     meta(name='apple-mobile-web-app-capable', content="yes")
 
   body
-    h1 Draftr!
-    div.container
+    div.navbar.navbar-inverse.navbar-fixed-top
+      div.container
+          div.navbar-header
+              a.navbar-brand Draftr
+    div
         block content
 
     script(src='/js/jquery-1.10.2.min.js')
