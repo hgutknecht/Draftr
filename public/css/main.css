@@ -69,7 +69,7 @@ span.pickNumber {
 .connectedSortable li:hover {
   cursor: pointer;
 }
-.connectedSortable   li.ui-sortable-helper {
+.connectedSortable li.ui-sortable-helper {
   cursor: move;
 }
 .picks,
@@ -79,6 +79,10 @@ span.pickNumber {
   height: 310px;
   overflow: scroll;
   padding: 1em;
+}
+.commentary .item {
+  border-bottom: 1px solid #e9e9e9;
+  margin: .2em;
 }
 .flip-clock-wrapper {
   margin: 3em 0 0 4em;
