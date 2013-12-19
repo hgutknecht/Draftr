@@ -42,7 +42,6 @@ $(function() {
   // Start the clock timer when someone goes on stage, send clock start to clients
   $('#sortable2, #sortable3').on('sortreceive', function(event, ui) {
     console.log(onStage);
-    console.log('this happened');
     if (onStage === true) {
       clock.stop();
       clock.setTime(180);
@@ -134,6 +133,7 @@ $(function() {
     $picks.html(data.html);
     clock.stop();
     clock.setTime(180);
+    $('.clock-status').html('');
   }
 
   // Sync clocks over clients.
