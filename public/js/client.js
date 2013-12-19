@@ -1,7 +1,8 @@
 $(function() {
 
   var clockRunning = false
-    , onStage = false;
+    , onStage = false
+    , timeOut = false;
 
   // Update 3 lists, broadcast on change to clients
   $('#sortable1, #sortable2, #sortable3').sortable({
@@ -70,16 +71,18 @@ $(function() {
     if (clockRunning) {
       clock.stop();
       clockRunning = false;
+      timeOut = true;
       $('.clock-status').html('TIMEOUT');
-    }
-    else {
+    } else {
       clock.start();
       clockRunning = true;
+      timeOut = false;
       $('.clock-status').html('');
     }
     send({
       type: 'clock'
     , running: clockRunning
+    , timeOut: timeOut
     , time: clock.getTime().time
     });
   });
@@ -135,6 +138,11 @@ $(function() {
 
   // Sync clocks over clients.
   function getClock(data) {
+    if (data.timeOut) {
+      $('.clock-status').html('TIMEOUT');
+    } else {
+      $('.clock-status').html('');
+    }
     clock.setTime(data.time);
     if (data.running) {
       clock.start();
