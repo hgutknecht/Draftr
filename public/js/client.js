@@ -1,6 +1,7 @@
 $(function() {
 
-  var clockRunning = false;
+  var clockRunning = false
+    , onStage = false;
 
   // Update 3 lists, broadcast on change to clients
   $('#sortable1, #sortable2, #sortable3').sortable({
@@ -22,6 +23,8 @@ $(function() {
 
   // Start the clock timer when someone goes on stage, send clock start to clients
   $('#sortable1').on('sortreceive', function(event, ui) {
+    onStage = true;
+    console.log(onStage);
     clock.start();
     clockRunning = true;
     send({
@@ -31,8 +34,17 @@ $(function() {
     });
     var $list = $(this);
     if ($list.children().length > 1) {
-      console.log('this happened');
       $(ui.sender).sortable('cancel');
+      $('.clock-status').html('');
+    }
+  });
+  // Start the clock timer when someone goes on stage, send clock start to clients
+  $('#sortable2, #sortable3').on('sortreceive', function(event, ui) {
+    console.log(onStage);
+    console.log('this happened');
+    if (onStage === true) {
+      clock.stop();
+      clock.setTime(180);
       $('.clock-status').html('');
     }
   });
